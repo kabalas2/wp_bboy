@@ -16,7 +16,7 @@
 add_action('admin_init', 'or_acf_installed');
 function or_acf_installed()
 {
-    if (is_admin() && current_user_can('activate_plugins') && !is_plugin_active('advamced-custom-fields/acf.php')) {
+    if (is_admin() && current_user_can('activate_plugins') && !is_plugin_active('advanced-custom-fields/acf.php')) {
         add_action('admin_notices', 'child_plugin_notice');
 
         deactivate_plugins(plugin_basename(__FILE__));
